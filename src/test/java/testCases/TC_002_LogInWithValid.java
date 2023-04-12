@@ -23,7 +23,7 @@ public class TC_002_LogInWithValid extends BaseClass {
 		sp.setPasswordForLogIn("123456789");
 		sp.clickOnLogInBTN();
 		boolean verifyUser = sp.VerifyUser();
-		softAssert.assertEquals(verifyUser, true);
+		Assert.assertEquals(verifyUser, true);
 		/*sp.deleteAc();
 		sp.clickOnContinue();
 		driver.navigate().refresh();

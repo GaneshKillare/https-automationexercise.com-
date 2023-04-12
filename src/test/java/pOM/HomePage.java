@@ -19,18 +19,44 @@ public class HomePage {
 	WebElement logSignBTN;
 	@FindBy(xpath = "//a[normalize-space()='Logout']")
 	WebElement logOutBTN;
-	
-	
+	@FindBy(xpath = "//a[normalize-space()='Contact us']")
+	WebElement contactUs;
+	@FindBy(xpath = "//a[contains(text(),'Test Cases')]")
+	WebElement testCasesBTN;
+	@FindBy(xpath = "//span[contains(text(),'Below is the list of test Cases for you to practic')]")
+	WebElement confMSGTestCases ;
+	@FindBy(xpath = "//a[@href='/products']") WebElement productBTN;
+
 	public boolean homePageIsDisplay() {
 		return homeBTN.isDisplayed();
 	}
+
 	public void clickOnLogInAndSignUpBTN() {
 		logSignBTN.click();
 	}
+
 	public boolean verifyACDeletedSuccessfully() {
-		return	logSignBTN.isDisplayed();
-		}
+		return logSignBTN.isDisplayed();
+	}
+
 	public void clickOnLogoutBTN() {
 		logOutBTN.click();
+	}
+
+	public void clickOnContactUsBTN() {
+		contactUs.click();
+	}
+
+	public void clickOnHomeBTN() {
+		homeBTN.click();
+	}
+	public void clickOnTestCases() {
+		testCasesBTN.click();
+	}
+	public boolean verifyNavigateTestCasePage() {
+		return confMSGTestCases.isDisplayed();
+	}
+	public void clickOnProductBTN() {
+		productBTN.click();
 	}
 }
