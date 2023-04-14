@@ -1,0 +1,16 @@
+testCases\TC_006_ContactUsForm.class
+pOM\SubscriptionPage.class
+testCases\TC_010_SubscriptionInHomePage.class
+testBase\BaseClass.class
+testCases\TC_005_LogoutUser.class
+pOM\ContactUsPage.class
+testCases\TC_003_LigInWithInvalid.class
+testCases\TC_009_SearchProduct.class
+testCases\TC_007_TestCasesPage.class
+pOM\ProductPage.class
+pOM\SignUPLogIn.class
+pOM\HomePage.class
+testCases\TC_001_CreatenewUser.class
+testCases\TC_008_ProductListAndProductDetails.class
+testCases\TC_002_LogInWithValid.class
+testCases\TC_004_LogInWithExistingMail.class

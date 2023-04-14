@@ -12,18 +12,18 @@ public class SubscriptionPage {
 		PageFactory.initElements(driver, this);
 		
 	}
-	@FindBy(xpath = "//input[@id='susbscribe_email']") WebElement SusbscribeHomePageEmail ;
+	@FindBy(id = "susbscribe_email") WebElement SusbscribeEmail ;
 	@FindBy(xpath = "//i[@class='fa fa-arrow-circle-o-right']") WebElement HomePageArrow ;
 	@FindBy(xpath = "//*[@class='alert-success alert']") WebElement successMSG ;
 	
 	
 	public void setEmailOnHomePage(String email) {
-		SusbscribeHomePageEmail.sendKeys(email);
+		SusbscribeEmail.sendKeys(email);
 	}
 	public void clickOnArrowOfSusbscribe() {
 		HomePageArrow.click();
 	}
-	public boolean verifySuccessMSG() {
+	public boolean verifySusbscribeEmailSuccessMSG() {
 		return successMSG.isDisplayed();
 	}
 	

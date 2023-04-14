@@ -24,8 +24,11 @@ public class HomePage {
 	@FindBy(xpath = "//a[contains(text(),'Test Cases')]")
 	WebElement testCasesBTN;
 	@FindBy(xpath = "//span[contains(text(),'Below is the list of test Cases for you to practic')]")
-	WebElement confMSGTestCases ;
-	@FindBy(xpath = "//a[@href='/products']") WebElement productBTN;
+	WebElement confMSGTestCases;
+	@FindBy(xpath = "//a[@href='/products']")
+	WebElement productBTN;
+	@FindBy(partialLinkText = "Cart")
+	WebElement cartBTN;
 
 	public boolean homePageIsDisplay() {
 		return homeBTN.isDisplayed();
@@ -50,13 +53,19 @@ public class HomePage {
 	public void clickOnHomeBTN() {
 		homeBTN.click();
 	}
+
 	public void clickOnTestCases() {
 		testCasesBTN.click();
 	}
+
 	public boolean verifyNavigateTestCasePage() {
 		return confMSGTestCases.isDisplayed();
 	}
+
 	public void clickOnProductBTN() {
 		productBTN.click();
+	}
+	public void clickOnCartBTN() {
+		cartBTN.click();
 	}
 }

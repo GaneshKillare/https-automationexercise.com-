@@ -29,7 +29,7 @@ public class TC_010_SubscriptionInHomePage extends BaseClass{
 		scrollDownFullPage();
 		scrb.setEmailOnHomePage("ganeshkillare@gmail.com");
 		scrb.clickOnArrowOfSusbscribe();
-		boolean successMSG =scrb.verifySuccessMSG();
+		boolean successMSG =scrb.verifySusbscribeEmailSuccessMSG();
 		Assert.assertEquals(successMSG, true);
 	    scrollUpPage();
 		softAssert.assertEquals(homePageIsAvalable, true);

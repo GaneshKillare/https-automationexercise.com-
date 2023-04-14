@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-12T22:14:12 IST" name="Default suite" finished-at="2023-04-12T22:14:22 IST" duration-ms="9559">
+  <suite started-at="2023-04-14T22:13:10 IST" name="Default suite" finished-at="2023-04-14T22:14:10 IST" duration-ms="60039">
     <groups>
     </groups>
-    <test started-at="2023-04-12T22:14:12 IST" name="Default test" finished-at="2023-04-12T22:14:22 IST" duration-ms="9559">
-      <class name="testCases.TC_010_SubscriptionInHomePage">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC_010_SubscriptionInHomePage@31ea9581]" started-at="2023-04-12T22:14:12 IST" name="setUp" finished-at="2023-04-12T22:14:21 IST" duration-ms="8685" status="PASS">
+    <test started-at="2023-04-14T22:13:10 IST" name="Default test" finished-at="2023-04-14T22:14:10 IST" duration-ms="60039">
+      <class name="testCases.TC_11_SubcriptionInCartPage">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.TC_11_SubcriptionInCartPage@50378a4]" started-at="2023-04-14T22:13:10 IST" name="setUp" finished-at="2023-04-14T22:14:07 IST" duration-ms="57214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSubscriptionInHomePage()[pri:0, instance:testCases.TC_010_SubscriptionInHomePage@31ea9581]" started-at="2023-04-12T22:14:21 IST" name="testSubscriptionInHomePage" finished-at="2023-04-12T22:14:22 IST" duration-ms="811" status="PASS">
+        <test-method signature="testSubcriptionINCartPage()[pri:0, instance:testCases.TC_11_SubcriptionInCartPage@50378a4]" started-at="2023-04-14T22:14:07 IST" name="testSubcriptionINCartPage" finished-at="2023-04-14T22:14:10 IST" duration-ms="2774" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSubscriptionInHomePage -->
-      </class> <!-- testCases.TC_010_SubscriptionInHomePage -->
+        </test-method> <!-- testSubcriptionINCartPage -->
+      </class> <!-- testCases.TC_11_SubcriptionInCartPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
