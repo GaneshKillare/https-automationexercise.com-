@@ -29,6 +29,7 @@ public class HomePage {
 	WebElement productBTN;
 	@FindBy(partialLinkText = "Cart")
 	WebElement cartBTN;
+	
 
 	public boolean homePageIsDisplay() {
 		return homeBTN.isDisplayed();
@@ -68,4 +69,5 @@ public class HomePage {
 	public void clickOnCartBTN() {
 		cartBTN.click();
 	}
+	
 }

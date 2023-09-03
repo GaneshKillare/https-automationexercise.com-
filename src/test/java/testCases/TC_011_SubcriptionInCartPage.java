@@ -11,7 +11,7 @@ import pOM.SignUPLogIn;
 import pOM.SubscriptionPage;
 import testBase.BaseClass;
 
-public class TC_11_SubcriptionInCartPage extends BaseClass {
+public class TC_011_SubcriptionInCartPage extends BaseClass {
 	HomePage hm;
 	SignUPLogIn sp;
 	Faker faker;

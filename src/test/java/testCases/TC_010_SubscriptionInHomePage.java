@@ -11,31 +11,31 @@ import pOM.SignUPLogIn;
 import pOM.SubscriptionPage;
 import testBase.BaseClass;
 
-public class TC_010_SubscriptionInHomePage extends BaseClass{
-	
+public class TC_010_SubscriptionInHomePage extends BaseClass {
+
 	HomePage hm;
 	SignUPLogIn sp;
 	Faker faker;
-	SubscriptionPage scrb ;
+	SubscriptionPage scrb;
+
 	@Test
 	public void testSubscriptionInHomePage() {
 		faker = new Faker();
 		hm = new HomePage(driver);
 		sp = new SignUPLogIn(driver);
-		scrb=	new  SubscriptionPage(driver);
+		scrb = new SubscriptionPage(driver);
 		SoftAssert softAssert = new SoftAssert();
 		boolean homePageIsAvalable = hm.homePageIsDisplay();
 		softAssert.assertEquals(homePageIsAvalable, true);
 		scrollDownFullPage();
 		scrb.setEmailOnHomePage("ganeshkillare@gmail.com");
 		scrb.clickOnArrowOfSusbscribe();
-		boolean successMSG =scrb.verifySusbscribeEmailSuccessMSG();
+		boolean successMSG = scrb.verifySusbscribeEmailSuccessMSG();
 		Assert.assertEquals(successMSG, true);
-	    scrollUpPage();
+		scrollUpPage();
 		softAssert.assertEquals(homePageIsAvalable, true);
-         driver.close();
+		driver.close();
 
-		
 	}
 
 }

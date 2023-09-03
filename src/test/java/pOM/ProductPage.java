@@ -27,6 +27,24 @@ public class ProductPage {
 	@FindBy(xpath = "//div[@class='features_items']")
 	WebElement searchedProducts;
 
+	@FindBy(xpath = "//a[text()='Add to cart'1)[1]")
+	WebElement AddToCart1Product;
+	// @FindBy(xpath = "(//a[@class='btn btn-default
+	// add-to-cart'][normalize-space()='Add to cart'])[2]")
+	// WebElement AddToCart2;
+	@FindBy(xpath = "//button[@class='btn btn-success close-modal btn-block']")
+	WebElement ContinueShoppingBTN;
+	@FindBy(xpath = "(//a[contains(text(),'Add to cart')])[3]")
+	WebElement AddToCart2Product;
+	@FindBy(xpath = "//u[normalize-space()='View Cart']")
+	WebElement viewCart;
+	@FindBy(xpath = "//div[@id='cart_info']")
+	WebElement cardInfo;
+	@FindBy(xpath = "(//a[contains(text(),'Add to cart')])[2]")
+	public WebElement moveTo1Element;
+	@FindBy(xpath = "(//div[@class='productinfo text-center'])[2]")
+	public WebElement moveTo2Element;
+
 	public boolean verifyAllProductList() {
 		return allProductList.isDisplayed();
 	}
@@ -39,14 +57,37 @@ public class ProductPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", firstProduct);
 	}
+
 	public void setValueInSearchBox(String searchProduct) {
 		searchBox.sendKeys(searchProduct);
 	}
+
 	public void clickOnSearchBTN() {
 		searchBTN.click();
 	}
+
 	public boolean verifySearchedProducts() {
 		return searchedProducts.isDisplayed();
 	}
-	
+
+	public void addToCart1Product() {
+		AddToCart1Product.click();
+	}
+
+	public void addToCart2Product() {
+		AddToCart2Product.click();
+	}
+
+	public void clickOnContinueBTN() {
+		ContinueShoppingBTN.click();
+	}
+
+	public void clickOnViewCart() {
+		viewCart.click();
+	}
+
+	public boolean verifyCartProduct() {
+		return viewCart.isDisplayed();
+	}
+
 }

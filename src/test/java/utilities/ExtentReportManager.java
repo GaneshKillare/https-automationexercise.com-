@@ -1,5 +1,7 @@
 package utilities;
 
+import java.io.IOException;
+
 //Extent report 5.x
 
 import java.text.SimpleDateFormat;
@@ -14,6 +16,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+
+import testBase.BaseClass;
 
 public class ExtentReportManager implements ITestListener {
 	public ExtentSparkReporter sparkReporter;
@@ -34,7 +38,7 @@ public class ExtentReportManager implements ITestListener {
 
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
-		extent.setSystemInfo("Application", "nopCommerce");
+		extent.setSystemInfo("Application", "Automation Exercise");
 		extent.setSystemInfo("Module", "Admin");
 		extent.setSystemInfo("Sub Module", "Customers");
 		extent.setSystemInfo("Operating System", System.getProperty("os.name"));
@@ -54,11 +58,12 @@ public class ExtentReportManager implements ITestListener {
 		test.log(Status.FAIL, result.getThrowable().getMessage());
 
 		try {
-			String screenshotPath = System.getProperty("user.dir") + "\\screenshots\\" + result.getName() + ".png";
-			test.addScreenCaptureFromPath(screenshotPath);
-		} catch (Exception e) {
-			e.printStackTrace();
+			String imgPath = new BaseClass().captureScreen(result.getName());
+			test.addScreenCaptureFromPath(imgPath);
+		} catch (IOException e1) {
+			e1.printStackTrace();
 		}
+
 	}
 
 	public void onTestSkipped(ITestResult result) {
